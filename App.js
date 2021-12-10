@@ -8,7 +8,8 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 
 const Tab = createBottomTabNavigator();
 
-export default function Home() {
+export default function App() {
+
   return (
     <NavigationContainer>
       <Tab.Navigator
