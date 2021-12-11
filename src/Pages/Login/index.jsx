@@ -17,7 +17,7 @@ export default function Login({ navigation }) {
     <View style={styles.container}>
       <TextInput
         style={{ width: "80%", borderWidth: 1, padding: 10, marginBottom: 10 }}
-        placeholder="Digite eu Nome"
+        placeholder="Digite seu Nome"
         value={nome}
         onChangeText={setNome}
       />
