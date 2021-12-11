@@ -2,6 +2,9 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import Home from "./src/pages/Home";
 import Login from "./src/pages/Login";
+import Galeria from "./src/Pages/Galeria";
+import Carrinho from "./src/Pages/Carrinho";
+import Detalhes from "./src/Pages/Detalhes";
 import { NavigationContainer } from "@react-navigation/native"; //navigation container engloba tudo
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -23,13 +26,13 @@ export default function App() {
                 ? "home"
                 : "home-outline"; 
             } else if (route.name === "Galeria") {
-              iconName = focused ? "ios-list" : "ios-list";
+              iconName = focused ? "albums" : "albums-outline";
             }else if (route.name === "Detalhes") {
-              iconName = focused ? "ios-list" : "ios-list";
+              iconName = focused ? "ellipsis-horizontal-circle-sharp" : "ellipsis-horizontal-circle-outline";
             }else if (route.name === "Carrinho") {
-              iconName = focused ? "ios-list" : "ios-list";
+              iconName = focused ? "cart" : "cart-outline";
             }else if (route.name === "Login") {
-              iconName = focused ? "ios-list" : "ios-list";
+              iconName = focused ? "person" : "person-outline";
             }
 
             // You can return any component that you like here!
@@ -39,8 +42,12 @@ export default function App() {
           tabBarInactiveTintColor: "gray",
         })}
       >
-        <Tab.Screen name="Login" component={Login} />
         <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Galeria" component={Galeria} />
+        <Tab.Screen name="Detalhes" component={Detalhes} />
+        <Tab.Screen name="Carrinho" component={Carrinho} />
+        <Tab.Screen name="Login" component={Login} />
+        
       </Tab.Navigator>
     </NavigationContainer>
   );
