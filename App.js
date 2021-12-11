@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import Home from "./src/pages/Home";
-import Login from "./src/pages/Login";
+import Home from "./src/Pages/Home";
+import Login from "./src/Pages/Login";
 import Galeria from "./src/Pages/Galeria";
 import Carrinho from "./src/Pages/Carrinho";
 import Detalhes from "./src/Pages/Detalhes";
