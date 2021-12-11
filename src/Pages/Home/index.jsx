@@ -1,13 +1,14 @@
 import React from "react";
-import { Text, View } from "react-native";
+import { View } from "react-native";
 import { styles } from "./styles";
+import Texto from "../../components/Texto";
 
 export default function Home() {
   
 
   return (
     <View style={styles.container}>
-      <Text>HOME</Text>
+      <Texto>HOME</Texto>
     </View>
   );
 }
