@@ -14,6 +14,7 @@ import Galeria from "./src/Pages/Galeria";
 import Carrinho from "./src/Pages/Carrinho";
 import Detalhes from "./src/Pages/Detalhes";
 import AppLoading from "expo-app-loading";
+import Header from "./src/components/header";
 
 const Tab = createBottomTabNavigator();
 
@@ -29,7 +30,8 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <StatusBar backgroundColor="#ffa29c" barStyle="light-content" />
+      <StatusBar backgroundColor="#ffa29c" barStyle="light-content"/>
+      <Header></Header>
       <Tab.Navigator
         initialRouteName="Login"
         screenOptions={({ route }) => ({
@@ -53,6 +55,7 @@ export default function App() {
           },
           tabBarActiveTintColor: "#0433FF",
           tabBarInactiveTintColor: "gray",
+          headerShown:false,
         })}
       >
         <Tab.Screen name="Home" component={Home} />
