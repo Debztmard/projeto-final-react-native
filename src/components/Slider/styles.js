@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
       alignSelf:'center',
     },
     textMarcador:{
-      color:'gray',
+      color:'',
       margin:3,
     },
     textMarcadorActive:{

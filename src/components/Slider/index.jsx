@@ -57,14 +57,13 @@ export default class Slider extends React.Component {
 }
 const styles = StyleSheet.create({
     container: {
-     marginTop:50,
-     width,
-     height,
+     width:null,
+     height:null,
     },
     marcador: {
       flexDirection:'row',
       position:'absolute',
-      bottom:0,
+      marginTop: 200,
       alignSelf:'center',
     },
     textMarcador:{

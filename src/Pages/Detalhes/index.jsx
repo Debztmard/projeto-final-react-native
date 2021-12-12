@@ -7,7 +7,7 @@ import Slider from "../../components/Slider";
 export default function Detalhes({ navigation }) {
   return (
     <View style={styles.container}>
-      <Slider></Slider>
+      <Slider/>
       <Texto>DETALHES</Texto>
     </View>
   );
