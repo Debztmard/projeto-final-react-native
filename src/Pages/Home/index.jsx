@@ -7,28 +7,19 @@ import Card from "../../components/Card";
 import Header from "../../components/Header";
 import axios from "axios";
 
-export default function Home() {
-  const [produtos, setProdutos] = useState(null);
 
-  const handleClick = async () => {
-    await axios({
-      method: "GET",
-      url: "https://api-nossa-loja.herokuapp.com/produtos",
-    }).then((response) => {
-      setProdutos(response.data);
-    });
-    console.log("Terminei a função");
-  };
-
-  useEffect(() => {
-    handleClick();
-  }, []);
-
+export default function Home({ navigation }) {
   return (
+    <View style={styles.container}>
+      <Slider style={styles.slider} />
+      <Texto>Home</Texto>
+    </View>
+  );
+return (
     <View >
       <ScrollView>
-        <Slider style={styles.slider} />
-        <View style={styles.container}>
+        
+        {/* <View style={styles.container}>
         {produtos?.map((produtos) => {
           return (
             <Card
@@ -39,9 +30,28 @@ export default function Home() {
             />
           );
         })}
-        </View>
+        </View> */}
         <Button title="teste imagem" onPress={handleClick} />
       </ScrollView>
     </View>
   );
-}
+
+// export default function Home() {
+//   const [produtos, setProdutos] = useState(null);
+
+//   const handleClick = async () => {
+//     await axios({
+//       method: "GET",
+//       url: "https://api-nossa-loja.herokuapp.com/produtos",
+//     }).then((response) => {
+//       setProdutos(response.data);
+//     });
+    
+//   };
+
+//   useEffect(() => {
+//     handleClick();
+//   }, []);
+
+  
+};
