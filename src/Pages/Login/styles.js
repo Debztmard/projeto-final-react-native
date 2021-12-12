@@ -7,5 +7,12 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
+   btnEntrar:{
+     width:"80%",
+     marginTop:10,
+   },
+   imgPrinc:{
+     marginBottom:25,
+   }
   });
   
