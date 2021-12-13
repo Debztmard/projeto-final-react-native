@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Component } from "react";
 import { View, Button, ScrollView } from "react-native";
 import { styles } from "./styles";
 import Texto from "../../components/Texto";
@@ -16,15 +16,16 @@ export default function Home({ navigation }) {
       method: "GET",
       url: "https://api-nossa-loja.herokuapp.com/produtos",
     }).then((response) => {
+      
       setProdutos(response.data);
     });
-    console.log("Terminei a função");
+    
   };
-
+  
   useEffect(() => {
     handleClick();
   }, []);
-
+  
   return (
     <View>
       <ScrollView>
@@ -48,8 +49,7 @@ export default function Home({ navigation }) {
             );
           })}
         </View>
-        <Button title='teste imagem' onPress={handleClick} />
       </ScrollView>
     </View>
-  );
-}
+  );  
+};
