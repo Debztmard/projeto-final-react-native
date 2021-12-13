@@ -28,7 +28,7 @@ export default function Home({ navigation }) {
   }, []);
 
   return (
-    <View>
+    <View style={{backgroundColor: "#fff",}}>
       <ScrollView>
         <Slider style={styles.slider} />
         <View style={styles.container}>
