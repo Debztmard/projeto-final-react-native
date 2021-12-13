@@ -7,6 +7,7 @@ import Card from "../../components/Card";
 import Header from "../../components/Header";
 import axios from "axios";
 import { Link } from "@react-navigation/native";
+import Oferta from "../../components/oferta";
 
 export default function Home({ navigation }) {
   const [produtos, setProdutos] = useState(null);
@@ -31,23 +32,7 @@ export default function Home({ navigation }) {
       <ScrollView>
         <Slider style={styles.slider} />
         <View style={styles.container}>
-          {produtos?.map((produtos) => {
-            return (
-              <>
-                <Card
-                  key={produtos.id}
-                  uri={produtos.imagens}
-                  preco={produtos.vlUnitario}
-                  nome={produtos.nome}
-                />
-                <Button
-                  title='Detalhes'
-                  onPress={() =>
-                    navigation.navigate("Detalhes", { id_produto: produtos.id })
-                  }></Button>
-              </>
-            );
-          })}
+          <Oferta/>
         </View>
       </ScrollView>
     </View>
