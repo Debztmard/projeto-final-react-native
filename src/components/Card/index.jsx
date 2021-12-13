@@ -5,7 +5,7 @@ import { styles } from "./styles";
 import { useNavigation } from "@react-navigation/native";
  
 export default function Card(props) {
-  const { nome, uri, preco } = props;
+  const { nome, uri, preco, descricao } = props;
   const navigation = useNavigation();
 
   return (
@@ -14,7 +14,7 @@ export default function Card(props) {
         <Image style={styles.imgProduto} source={{ uri: uri }} />
         <Texto>{nome}</Texto>
         <Texto>R$ {preco}</Texto>
-        {/* <Button title="Detalhes" onPress={() => navigation.navigate('Detalhes',{id:key})}></Button> */}
+        <Button title="Detalhes" onPress={() => navigation.navigate('Detalhes',{nome: nome, descricao:descricao, preco: preco, uri:uri})}></Button>
       </View>
     </View>
   )

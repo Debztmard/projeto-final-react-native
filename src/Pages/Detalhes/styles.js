@@ -7,5 +7,11 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
       justifyContent: 'center',
     },
+    img: {
+      height: 300,
+      width: 300,
+    },
+    
+
   });
   

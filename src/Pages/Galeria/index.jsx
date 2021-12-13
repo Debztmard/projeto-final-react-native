@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { View, Button, ScrollView, TouchableOpacity } from "react-native";
+import { View, ScrollView } from "react-native";
 import { styles } from "./styles";
-import Texto from "../../components/Texto";
-//import Slider from "../../components/Slider";
 import Card from "../../components/Card";
-import Header from "../../components/Header";
 import axios from "axios";
 
 export default function Galeria() {
@@ -34,6 +31,7 @@ export default function Galeria() {
                 uri={produtos.imagens}
                 preco={produtos.vlUnitario}
                 nome={produtos.nome}
+                descricao={produtos.descricao}
               />
             );
           })}
