@@ -6,8 +6,9 @@ import Slider from "../../components/Slider";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
 import axios from "axios";
+import { Link } from "@react-navigation/native";
 
-export default function Home() {
+export default function Home({ navigation }) {
   const [produtos, setProdutos] = useState(null);
 
   const handleClick = async () => {
@@ -25,22 +26,29 @@ export default function Home() {
   }, []);
 
   return (
-    <View >
+    <View>
       <ScrollView>
         <Slider style={styles.slider} />
         <View style={styles.container}>
-        {produtos?.map((produtos) => {
-          return (
-            <Card
-              key={produtos.id}
-              uri={produtos.imagens}
-              preco={produtos.vlUnitario}
-              nome={produtos.nome}
-            />
-          );
-        })}
+          {produtos?.map((produtos) => {
+            return (
+              <>
+                <Card
+                  key={produtos.id}
+                  uri={produtos.imagens}
+                  preco={produtos.vlUnitario}
+                  nome={produtos.nome}
+                />
+                <Button
+                  title='Detalhes'
+                  onPress={() =>
+                    navigation.navigate("Detalhes", { id_produto: produtos.id })
+                  }></Button>
+              </>
+            );
+          })}
         </View>
-        <Button title="teste imagem" onPress={handleClick} />
+        <Button title='teste imagem' onPress={handleClick} />
       </ScrollView>
     </View>
   );

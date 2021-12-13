@@ -6,13 +6,14 @@ import Login from "../../Pages/Login";
 import Galeria from "../../Pages/Galeria";
 import Carrinho from "../../Pages/Carrinho";
 import Detalhes from "../../Pages/Detalhes";
+import { NavigationContainer } from "@react-navigation/native";
 
 const Tab = createBottomTabNavigator();
 
 export default function TabNav() {
   return (
     <Tab.Navigator
-      initialRouteName="Login"
+      initialRouteName='Login'
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
@@ -35,13 +36,12 @@ export default function TabNav() {
         tabBarActiveTintColor: "#0433FF",
         tabBarInactiveTintColor: "gray",
         headerShown: false,
-      })}
-    >
-      <Tab.Screen name="Home" component={Home} />
-      <Tab.Screen name="Galeria" component={Galeria} />
-      <Tab.Screen name="Detalhes" component={Detalhes} />
-      <Tab.Screen name="Carrinho" component={Carrinho} />
-      <Tab.Screen name="Login" component={Login} />
+      })}>
+      <Tab.Screen name='Home' component={Home} />
+      <Tab.Screen name='Galeria' component={Galeria} />
+      <Tab.Screen name='Detalhes' component={Detalhes} />
+      <Tab.Screen name='Carrinho' component={Carrinho} />
+      <Tab.Screen name='Login' component={Login} />
     </Tab.Navigator>
   );
 }

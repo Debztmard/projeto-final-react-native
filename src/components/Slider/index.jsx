@@ -3,6 +3,7 @@ import { View, Image, Text, StyleSheet, Dimensions, ScrollView } from 'react-nat
 // import styles from './styles';
 
 
+
 const {width} = Dimensions.get("window");
 const height = width * 0.6;
 
