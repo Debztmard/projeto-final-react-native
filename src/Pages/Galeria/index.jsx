@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { View, Button, ScrollView } from "react-native";
+import { View, Button, ScrollView, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 import Texto from "../../components/Texto";
 //import Slider from "../../components/Slider";
@@ -17,7 +17,6 @@ export default function Galeria() {
     }).then((response) => {
       setProdutos(response.data);
     });
-    
   };
 
   useEffect(() => {
@@ -25,22 +24,20 @@ export default function Galeria() {
   }, []);
 
   return (
-    <View >
+    <View>
       <ScrollView>
-        
         <View style={styles.container}>
-        {produtos?.map((produtos) => {
-          return (
-            <Card
-              key={produtos.id}
-              uri={produtos.imagens}
-              preco={produtos.vlUnitario}
-              nome={produtos.nome}
-            />
-          );
-        })}
+          {produtos?.map((produtos) => {
+            return (
+              <Card
+                key={produtos.id}
+                uri={produtos.imagens}
+                preco={produtos.vlUnitario}
+                nome={produtos.nome}
+              />
+            );
+          })}
         </View>
-        <Button title="teste imagem" onPress={handleClick} />
       </ScrollView>
     </View>
   );
