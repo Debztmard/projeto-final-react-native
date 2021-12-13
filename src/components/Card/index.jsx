@@ -12,8 +12,8 @@ export default function Card(props) {
     <View style={styles.container}>
       <View style={styles.produtoContainer}>
         <Image style={styles.imgProduto} source={{ uri: uri }} />
-        <Texto>{nome}</Texto>
-        <Texto>R$ {preco}</Texto>
+        <Texto style={styles.nome}>{nome}</Texto>
+        <Texto style={styles.preco}>R$ {preco}</Texto>
         <Button title="Detalhes" onPress={() => navigation.navigate('Detalhes',{nome: nome, descricao:descricao, preco: preco, uri:uri})}></Button>
       </View>
     </View>

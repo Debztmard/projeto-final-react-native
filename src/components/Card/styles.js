@@ -15,6 +15,16 @@ export const styles = StyleSheet.create({
   imgProduto: {
     width: 300,
     height: 300,
-    marginBottom: 20,
+    marginBottom: 10,
+  },
+  nome: {
+    fontWeight: "bold",
+    fontSize: 22,
+    padding: 5,
+  },
+  preco: {
+    padding: 5,
+    fontWeight: "bold",
+    fontSize: 17,
   },
 });
