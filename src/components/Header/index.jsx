@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { View, Image, Animated, TextInput } from "react-native";
 import { styles } from "./styles";
-import logo from "../../../assets/logo.png";
+import poli from "../../../assets/poli.png";
 import iconLogin from "../../../assets/icon-login.png";
 import iconLupa from "../../../assets/icon-lupa.png";
 
@@ -12,7 +12,7 @@ export default function Header() {
     <View>
       <Animated.View style={styles.header}>
         <Animated.Image
-          source={logo}
+          source={poli}
           style={{
             width: scrollY.interpolate({
               inputRange: [0, 120],
