@@ -16,6 +16,7 @@ export const styles = StyleSheet.create({
     width: 300,
     height: 300,
     marginBottom: 10,
+    resizeMode: 'contain',
   },
   nome: {
     fontWeight: "bold",
