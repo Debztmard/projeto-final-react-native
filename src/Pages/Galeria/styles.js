@@ -6,9 +6,5 @@ import { StyleSheet } from "react-native";
       backgroundColor: "#fff",
       alignItems: "center",
       justifyContent: "center",
-    },
-      slider:{
-        marginBottom: 100,
-      },
-      
+    }, 
     }); 

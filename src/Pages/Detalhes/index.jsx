@@ -9,9 +9,9 @@ export default function Detalhes({ route }) {
   return (
     <View style={styles.container}>
       <Image style={styles.img} source={{ uri }} />
-      <Texto>{nome}</Texto>
-      <Texto>{descricao}</Texto>
-      <Texto>{preco}</Texto>
+      <Texto style={styles.nome} >{nome}</Texto>
+      <Texto style={styles.descricao} >{descricao}</Texto>
+      <Texto style={styles.preco} >R$ {preco}</Texto>
     </View>
   );
 }
