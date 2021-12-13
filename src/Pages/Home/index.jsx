@@ -10,6 +10,7 @@ import { Link } from "@react-navigation/native";
 import Oferta from "../../components/oferta";
 import { Animated } from "react-native-web";
 
+
 export default function Home({ navigation }) {
   const [produtos, setProdutos] = useState(null);
 

@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     height: "100%",
     width: "100%",
-    marginTop: 10,
+    marginVertical: 30
   },
   produtoContainer: {
     flex: 2,

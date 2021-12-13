@@ -3,9 +3,10 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
       flex: 1,
-      backgroundColor: '#fff',
+      backgroundColor: '#red',
       alignItems: 'center',
       justifyContent: 'center',
+      marginTop: 30
     },
     imgContainer:{
       flex:3,
