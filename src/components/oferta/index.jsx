@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, Button, Image, ActivityIndicator } from 'react-native';
+import { StyleSheet, View, Button, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
 import axios from 'axios';
+import { useNavigation } from "@react-navigation/native";
+
 //import {styles} from "./styles";
 
 export default function Oferta() {
   const [loading, setLoading] = useState(false);
   const [apiData, setApiData] = useState(null);
   var numAleatorio = (Math.floor(Math.random()*10));
+  const navigation = useNavigation();
   
   const handleClick = async () => {
   
@@ -35,6 +38,7 @@ useEffect(() => {
 
   return (
     <View style={styles.container}>
+      <TouchableOpacity onPress={() => navigation.navigate('Galeria')}>
       <View style={styles.imgContainer}>
       <Image 
       style={styles.img}
@@ -43,6 +47,7 @@ useEffect(() => {
       onLoadEnd={() => setLoading(false)}
       />
       </View>
+      </TouchableOpacity>
       {loading && <ActivityIndicator size="large" color="blue" />}
       <View style={styles.btnContainer}>
         
@@ -51,6 +56,7 @@ useEffect(() => {
         onPress={handleClick}
         disabled={loading} />
       </View>
+      
     </View>
   );
 }

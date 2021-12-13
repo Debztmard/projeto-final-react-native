@@ -8,6 +8,7 @@ import Header from "../../components/Header";
 import axios from "axios";
 import { Link } from "@react-navigation/native";
 import Oferta from "../../components/oferta";
+import { Animated } from "react-native-web";
 
 export default function Home({ navigation }) {
   const [produtos, setProdutos] = useState(null);
@@ -17,24 +18,22 @@ export default function Home({ navigation }) {
       method: "GET",
       url: "https://api-nossa-loja.herokuapp.com/produtos",
     }).then((response) => {
-      
       setProdutos(response.data);
     });
-    
   };
-  
+
   useEffect(() => {
     handleClick();
   }, []);
-  
+
   return (
     <View>
       <ScrollView>
         <Slider style={styles.slider} />
         <View style={styles.container}>
-          <Oferta/>
+         <Oferta />
         </View>
       </ScrollView>
     </View>
-  );  
-};
+  );
+}
