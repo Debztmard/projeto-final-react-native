@@ -12,7 +12,7 @@ export default function Login({ navigation }) {
       alert("Erro! Nome/Senha não preenchidos!");
       return;
     } else if (nome === "admin" || senha === "admin") {
-      navigation.navigate("Home");
+      navigation.navigate("Main");
       alert("Login efetuado!");
     } else {
       alert("Erro! Nome/Senha incorretos, digite novamente!");

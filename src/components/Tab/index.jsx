@@ -47,7 +47,7 @@ function TabNav() {
             iconName = focused ? "albums" : "albums-outline";
           } else if (route.name === "Carrinho") {
             iconName = focused ? "cart" : "cart-outline";
-          } else if (route.name === "Login") {
+          } else if (route.name === "Minha Conta") {
             iconName = focused ? "person" : "person-outline";
           }
           return <Ionicons name={iconName} size={size} color={color} />;
@@ -59,7 +59,7 @@ function TabNav() {
       <Tab.Screen name='Home' component={Home} />
       <Tab.Screen name='Galeria' component={StackGaleria} />
       <Tab.Screen name='Carrinho' component={Carrinho} />
-      <Tab.Screen name='Login' component={StackLogin} /> 
+      <Tab.Screen name='Minha Conta' component={StackLogin} /> 
       
     </Tab.Navigator>
     
