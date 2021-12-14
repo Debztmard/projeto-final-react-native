@@ -7,6 +7,7 @@ import Galeria from "../../Pages/Galeria";
 import Carrinho from "../../Pages/Carrinho";
 import Detalhes from "../../Pages/Detalhes";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import CadastroUsuario from "../../Pages/CadastrarUsuario";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,11 +22,21 @@ function StackGaleria(){
   )
 }
 
-export default function TabNav() {
+export default function StackLogin(){
+  return (
+    <Stack.Navigator>
+      <Stack.Screen  options={{headerShown: false}} name="StackLogin" component={Login} />
+      <Stack.Screen  options={{headerShown: false}} name="CadastroUsuario" component={CadastroUsuario} />
+      <Stack.Screen  options={{headerShown: false}} name="Main" component={TabNav} />
+    </Stack.Navigator>
+  )
+}
+
+function TabNav() {
   return (
       
     <Tab.Navigator
-      initialRouteName='Login'
+      initialRouteName='Home'
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
@@ -48,7 +59,7 @@ export default function TabNav() {
       <Tab.Screen name='Home' component={Home} />
       <Tab.Screen name='Galeria' component={StackGaleria} />
       <Tab.Screen name='Carrinho' component={Carrinho} />
-      <Tab.Screen name='Login' component={Login} /> 
+      <Tab.Screen name='Login' component={StackLogin} /> 
       
     </Tab.Navigator>
     

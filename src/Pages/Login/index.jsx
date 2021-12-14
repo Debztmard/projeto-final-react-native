@@ -1,6 +1,7 @@
 import { styles } from "./styles";
 import React, { useState } from "react";
 import { Button, TextInput, View, Image } from "react-native";
+import Texto from "../../components/Texto";
 
 export default function Login({ navigation }) {
   const [nome, setNome] = useState(null);
@@ -41,6 +42,8 @@ export default function Login({ navigation }) {
       />
       <View style={styles.btnEntrar}>
         <Button title='Entrar' onPress={handleClick} />
+        <Texto style={{textAlign:'center'}}>Não tem cadastro?</Texto>
+        <Button title='Cadastrar' onPress={() => navigation.navigate('CadastroUsuario')}></Button>
       </View>
     </View>
   );
