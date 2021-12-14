@@ -36,6 +36,9 @@ export default function MinhaConta({ navigation }) {
       <View style={styles.btnEntrar}>
         <Button title='Excluir conta' onPress={handleDelete} />
       </View>
+      <View style={styles.btnEntrar}>
+        <Button title='SAIR' onPress={()=> navigation.popToTop()} />
+      </View>
     </View>
   );
 }
