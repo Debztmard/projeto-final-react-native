@@ -17,7 +17,7 @@ export default class Cadastro extends BaseModel {
   static get columnMapping() {
     return {
       id: { type: types.INTEGER, primary_key: true },
-      nome: { type: types.TEXT, not_null: true },
+      usuario: { type: types.TEXT, not_null: true },
       senha: { type: types.NUMERIC, not_null: true },
     };
   }

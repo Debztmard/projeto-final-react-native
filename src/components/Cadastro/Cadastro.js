@@ -3,7 +3,6 @@ import { Button, View } from "react-native";
 import Cadastro from "../../model/cadastro";
 import Texto from "../Texto"
 import {
-  createTable,
   createCadastro,
   getAllCadastro,
   deleteAllCadastro,
@@ -13,10 +12,9 @@ import { styles } from "./styles";
 export default function Usuario() {
   const [usuario, setUsuario] = useState(null);
   const [senha, setSenha] = useState(null);
-  //const [listaCarrinho, setListaCarrinho] = useState([]);
+  const [listaCadastro, setListaCadastro] = useState([]);
 
   useEffect(async () => {
-    createTable();
     setListaCadastro(await Cadastro.query());
   }, []);
 
