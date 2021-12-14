@@ -8,6 +8,7 @@ import Carrinho from "../../Pages/Carrinho";
 import Detalhes from "../../Pages/Detalhes";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import CadastroUsuario from "../../Pages/CadastrarUsuario";
+import MinhaConta from "../../Pages/MinhaConta";
 
 const Stack = createNativeStackNavigator();
 
@@ -59,7 +60,7 @@ function TabNav() {
       <Tab.Screen name='Home' component={Home} />
       <Tab.Screen name='Galeria' component={StackGaleria} />
       <Tab.Screen name='Carrinho' component={Carrinho} />
-      <Tab.Screen name='Minha Conta' component={StackLogin} /> 
+      <Tab.Screen name='Minha Conta' component={MinhaConta} /> 
       
     </Tab.Navigator>
     
