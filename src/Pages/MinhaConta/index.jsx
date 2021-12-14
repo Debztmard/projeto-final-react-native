@@ -6,22 +6,10 @@ import Texto from "../../components/Texto";
 import { deleteAllCadastro } from "../../repository/cadastroRepository";
 
 export default function MinhaConta({ navigation }) {
-  // const [nome, setNome] = useState(null);
-  // const [senha, setsenha] = useState(null);
 
-  // const handleClick = () => {
-  //   if (nome === null || senha === null) {
-  //     alert("Erro! Nome/Senha não preenchidos!");
-  //     return;
-  //   } else if (nome === "admin" || senha === "admin") {
-  //     navigation.navigate("Home");
-  //     alert("Login efetuado!");
-  //   } else {
-  //     alert("Erro! Nome/Senha incorretos, digite novamente!");
-  //   }
-  // };
   const handleDelete = () => {
     deleteAllCadastro();
+    navigation.popToTop();
   };
   return (
     <View style={styles.container}>
@@ -31,7 +19,7 @@ export default function MinhaConta({ navigation }) {
           style={styles.avatar}
           resizeMode='center'
         />
-        <Texto style={styles.texto} >Fulano de tal</Texto>
+        <Texto style={styles.texto} >Sua conta</Texto>
       </View>
       <View style={styles.btnEntrar}>
         <Button title='Excluir conta' onPress={handleDelete} />
@@ -42,15 +30,4 @@ export default function MinhaConta({ navigation }) {
     </View>
   );
 }
-  {/* <TextInput
-        style={{ width: "80%", borderWidth: 1, padding: 10, marginBottom: 10 }}
-        placeholder='Digite seu Nome'
-        value={nome}
-        onChangeText={setNome}
-      />
-      <TextInput
-        style={{ width: "80%", borderWidth: 1, padding: 10, marginBottom: 10 }}
-        placeholder='Digite sua senha'
-        value={senha}
-        onChangeText={setsenha}
-      /> */}
+  

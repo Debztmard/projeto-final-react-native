@@ -13,20 +13,8 @@ export default function CadastroUsuario({ navigation, route }) {
   const { setListaCadastro } = route.params;
   
 
-  // const props = {
-  //   usuario: "deborah",
-  //   senha: 1234
-  // }
-
-  // const novoCadastro = new Cadastro(props);
-  // novoCadastro.save();
-
-  // useEffect(async () => {
-  //   setListaCadastro(await Cadastro.query());
-  // }, []);
-
   const seguraClick = async () => {
-    // if (!usuario || !senha) return;
+
     await createCadastro(usuario, senha);
     setListaCadastro(await getAllCadastro());
 
@@ -35,18 +23,6 @@ export default function CadastroUsuario({ navigation, route }) {
 
     navigation.goBack();
   };
-
-  // const handleClick = () => {
-  //   if (nome === null || senha === null) {
-  //     alert("Erro! Nome/Senha não preenchidos!");
-  //     return;
-  //   } else if (nome === "admin" || senha === "admin") {
-  //     navigation.navigate("Home");
-  //     alert("Login efetuado!");
-  //   } else {
-  //     alert("Erro! Nome/Senha incorretos, digite novamente!");
-  //   }
-  // };
 
   return (
     <View style={styles.container}>
@@ -71,7 +47,6 @@ export default function CadastroUsuario({ navigation, route }) {
       />
       <View style={styles.btnEntrar}>
         <Button title='Salvar cadastro' onPress={seguraClick} />
-        {/* <Button title='Ir Login' onPress={() => navigation.navigate('Login')}></Button> */}
       </View>
     </View>
   );
