@@ -1,17 +1,19 @@
 import { styles } from "./styles";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, TextInput, View, Image } from "react-native";
 import Texto from "../../components/Texto";
 
 export default function Login({ navigation }) {
   const [nome, setNome] = useState(null);
   const [senha, setsenha] = useState(null);
+  const [listaCadastro, setListaCadastro] = useState([]);
+  
 
   const handleClick = () => {
     if (nome === null || senha === null) {
       alert("Erro! Nome/Senha não preenchidos!");
       return;
-    } else if (nome === "admin" || senha === "admin") {
+    } else if (listaCadastro.some(item => item.usuario === nome)  && listaCadastro.some(item => item.senha === senha)) {
       navigation.navigate("Main");
       alert("Login efetuado!");
     } else {
@@ -43,7 +45,7 @@ export default function Login({ navigation }) {
       <View style={styles.btnEntrar}>
         <Button title='Entrar' onPress={handleClick} />
         <Texto style={{textAlign:'center'}}>Não tem cadastro?</Texto>
-        <Button title='Cadastrar' onPress={() => navigation.navigate('CadastroUsuario')}></Button>
+        <Button title='Cadastrar' onPress={() => navigation.navigate('CadastroUsuario', {setListaCadastro: setListaCadastro})}></Button>
       </View>
     </View>
   );

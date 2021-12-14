@@ -8,7 +8,6 @@ import {
 } from "@expo-google-fonts/montserrat";
 import AppLoading from "expo-app-loading";
 import Header from "./src/components/Header";
-import Tab from "./src/components/Tab";
 import { createTable } from "./src/repository/cadastroRepository";
 import StackLogin from "./src/components/Tab";
 
@@ -20,11 +19,11 @@ export default function App() {
   useEffect(async () => {
     createTable();
   }, []);
+  
 
   if (!fonteCarregada) {
     return <AppLoading />;
   };
-
 
   return (
     <NavigationContainer>

@@ -5,7 +5,7 @@ export const createTable = async () => {
   console.log("Tabela criada!");
 };
 
-export const createCadastro = async (usuario, senha ) => {
+export const createCadastro = async ( usuario, senha ) => {
   const novoCadastro = new Cadastro({
     usuario: usuario,
     senha: senha,
@@ -18,5 +18,5 @@ export const getAllCadastro = async() => {
 };
 
 export const deleteAllCadastro = async () => {
-    Pessoa.destroyAll();
+    Cadastro.destroyAll();
 }

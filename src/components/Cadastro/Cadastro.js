@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Button, View } from "react-native";
 import Cadastro from "../../model/cadastro";
-import Texto from "../Texto"
 import {
   createCadastro,
   getAllCadastro,
-  deleteAllCadastro,
 } from "./src/repository/cadastroRepository";
 import { styles } from "./styles";
 
@@ -30,7 +28,6 @@ export default function Usuario() {
   };
 
   const handleDelete = () => {
-    deleteAllCadastro();
     setListaCadastro([]);
   };
 
@@ -48,8 +45,8 @@ export default function Usuario() {
         value={senha}
         onChangeText={setSenha}
       />
-      <Button title="Excluir conta" onPress={handleDelete} />
-      <Texto>Excluir conta</Texto>
+      {/* <Button title="Excluir conta" onPress={handleDelete} />
+      <Texto>Excluir conta</Texto> */}
       <Button title="Criar conta" onPress={handleClick} />
       {/* <Texto>Carrinho</Texto>
       {listaCarrinho.map((carrinho) => {
