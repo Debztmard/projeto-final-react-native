@@ -23,12 +23,14 @@ export const styles = StyleSheet.create({
     paddingBottom: 5,
   },
   imgLupa: {
-    width: 55,
-    height: 55,
-    marginBottom: 10,
+    marginLeft:10,
+    marginRight:10,
+    marginBottom: 0,
+    marginTop:5,
   },
   textInput: {
     width: "80%",
+    height: 45,
     borderWidth: 1,
     padding: 10,
     marginBottom: 10,

@@ -4,6 +4,7 @@ import { styles } from "./styles";
 import poli from "../../../assets/poli.png";
 import iconLogin from "../../../assets/icon-login.png";
 import iconLupa from "../../../assets/icon-lupa.png";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function Header() {
   const [scrollY, setScrollY] = useState(new Animated.Value(0));
@@ -23,17 +24,18 @@ export default function Header() {
           }}
           resizeMode="contain"
         />
-        <Image
+        <Ionicons name="person-circle-outline" size={45} />
+        {/* <Image
           source={iconLogin}
           style={styles.imgLogin}
           resizeMode="contain"
-        />
+        /> */}
       </Animated.View>
-      <View style={styles.pesquisa}>
-        <Image source={iconLupa} style={styles.imgLupa} resizeMode="contain" />
+      <View style={styles.pesquisa}>        
+        <Ionicons name="search" style={styles.imgLupa} size={30} />
         <TextInput
           style={styles.textInput}
-          placeholder="Pesquise aqui seus produtos..."
+          placeholder={"Pesquise aqui seus produtos..."}
         />
       </View>
     </View>
