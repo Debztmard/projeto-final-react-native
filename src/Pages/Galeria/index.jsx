@@ -3,6 +3,7 @@ import { View, ScrollView } from "react-native";
 import { styles } from "./styles";
 import Card from "../../components/Card";
 import axios from "axios";
+import Header from "../../components/Header";
 
 export default function Galeria() {
   const [produtos, setProdutos] = useState(null);
@@ -21,7 +22,8 @@ export default function Galeria() {
   }, []);
 
   return (
-    <View>
+    <View >
+      <Header/>
       <ScrollView>
         <View style={styles.container}>
           {produtos?.map((produtos) => {

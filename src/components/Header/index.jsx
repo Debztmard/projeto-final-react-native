@@ -9,7 +9,7 @@ export default function Header() {
   const [scrollY, setScrollY] = useState(new Animated.Value(0));
 
   return (
-    <View>
+    <View style={styles.back}>
       <Animated.View style={styles.header}>
         <Animated.Image
           source={poli}
@@ -34,8 +34,6 @@ export default function Header() {
         <TextInput
           style={styles.textInput}
           placeholder="Pesquise aqui seus produtos..."
-          //value={produto}
-          //onChangeText={setProduto}
         />
       </View>
     </View>

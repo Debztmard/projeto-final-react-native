@@ -12,6 +12,7 @@ export const styles = StyleSheet.create({
     paddingLeft: 10,
     borderBottomWidth: 2,
     borderBottomColor: "#FFF",
+    backgroundColor: "#fff",
   },
   pesquisa: {
     flexDirection: "row",
@@ -32,4 +33,7 @@ export const styles = StyleSheet.create({
     padding: 10,
     marginBottom: 10,
   },
+  back:{
+    backgroundColor: "#fff",
+  }
 });
