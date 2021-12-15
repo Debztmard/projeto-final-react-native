@@ -8,14 +8,23 @@ export const styles = StyleSheet.create({
       justifyContent: "center",
     },
     imgContainer: {
-      flex: 3,
+      flex: 1,
+      width: 200,
+      height: 200,
+      alignItems: "center",
+      justifyContent: "center",
+      backgroundColor: "#fff",
+      marginTop:20,
+
     },
     btnContainer: {
       flex: 1,
       justifyContent: "center",
+      marginTop:24,
+      
     },
     img: {
-      width: 400,
+      width: 300,
       height: 250,
     },
   });
