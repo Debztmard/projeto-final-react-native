@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
   },
   btnEntrar: {
     width: "80%",
-    marginTop: 10,
+    marginTop: 30,
   },
   
   avatar: {
@@ -19,8 +19,20 @@ export const styles = StyleSheet.create({
     alignItems: "center",
   },
   texto:{
-    fontSize: 16,
+    fontSize: 22,
     fontWeight: "bold",
     justifyContent: "center",
+    paddingTop: 20
+  },
+  fxImg:{
+    flex: 1,
+    width: "100%",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  fxButton:{
+    flex: 1,
+    width: "100%",
+    alignItems: "center",
   }
 });

@@ -7,13 +7,15 @@ export default function Login({ navigation }) {
   const [nome, setNome] = useState(null);
   const [senha, setsenha] = useState(null);
   const [listaCadastro, setListaCadastro] = useState([]);
-  
 
   const handleClick = () => {
     if (nome === null || senha === null) {
       alert("Erro! Nome/Senha não preenchidos!");
       return;
-    } else if (listaCadastro.some(item => item.usuario === nome)  && listaCadastro.some(item => item.senha === senha)) {
+    } else if (
+      listaCadastro.some((item) => item.usuario === nome) &&
+      listaCadastro.some((item) => item.senha === senha)
+    ) {
       navigation.navigate("Main");
       alert("Login efetuado!");
     } else {
@@ -43,9 +45,16 @@ export default function Login({ navigation }) {
         onChangeText={setsenha}
       />
       <View style={styles.btnEntrar}>
-        <Button title='Entrar' onPress={handleClick} />
-        <Texto style={{textAlign:'center'}}>Não tem cadastro?</Texto>
-        <Button title='Cadastrar' onPress={() => navigation.navigate('CadastroUsuario', {setListaCadastro: setListaCadastro})}></Button>
+        <Button title='Entrar' color='#131418' onPress={handleClick} />
+        <Texto style={{ textAlign: "center" }}>Não tem cadastro?</Texto>
+        <Button
+          title='Cadastrar'
+          color='#131418'
+          onPress={() =>
+            navigation.navigate("CadastroUsuario", {
+              setListaCadastro: setListaCadastro,
+            })
+          }></Button>
       </View>
     </View>
   );

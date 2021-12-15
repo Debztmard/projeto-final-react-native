@@ -11,10 +11,8 @@ export default function CadastroUsuario({ navigation, route }) {
   const [usuario, setUsuario] = useState(null);
   const [senha, setSenha] = useState(null);
   const { setListaCadastro } = route.params;
-  
 
   const seguraClick = async () => {
-
     await createCadastro(usuario, senha);
     setListaCadastro(await getAllCadastro());
 
@@ -46,7 +44,7 @@ export default function CadastroUsuario({ navigation, route }) {
         onChangeText={setSenha}
       />
       <View style={styles.btnEntrar}>
-        <Button title='Salvar cadastro' onPress={seguraClick} />
+        <Button title='Salvar cadastro' color='#131418' onPress={seguraClick} />
       </View>
     </View>
   );

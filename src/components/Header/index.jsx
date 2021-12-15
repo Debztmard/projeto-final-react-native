@@ -21,19 +21,19 @@ export default function Header() {
             }),
             height: 40,
           }}
-          resizeMode="contain"
+          resizeMode='contain'
         />
         <Image
           source={iconLogin}
           style={styles.imgLogin}
-          resizeMode="contain"
+          resizeMode='contain'
         />
       </Animated.View>
       <View style={styles.pesquisa}>
-        <Image source={iconLupa} style={styles.imgLupa} resizeMode="contain" />
+        <Image source={iconLupa} style={styles.imgLupa} resizeMode='contain' />
         <TextInput
           style={styles.textInput}
-          placeholder="Pesquise aqui seus produtos..."
+          placeholder='Pesquise aqui seus produtos...'
         />
       </View>
     </View>

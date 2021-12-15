@@ -14,28 +14,47 @@ const Stack = createNativeStackNavigator();
 
 const Tab = createBottomTabNavigator();
 
-function StackGaleria(){
+function StackGaleria() {
   return (
     <Stack.Navigator>
-      <Stack.Screen  options={{headerShown: false}} name="StackGaleria" component={Galeria} />
-      <Stack.Screen  options={{headerShown: false}} name="Detalhes" component={Detalhes} />
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name='StackGaleria'
+        component={Galeria}
+      />
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name='Detalhes'
+        component={Detalhes}
+      />
     </Stack.Navigator>
-  )
+  );
 }
 
-export default function StackLogin(){
+export default function StackLogin() {
   return (
     <Stack.Navigator>
-      <Stack.Screen  options={{headerShown: false}} name="StackLogin" component={Login} />
-      <Stack.Screen  options={{headerShown: false}} name="CadastroUsuario" component={CadastroUsuario} />
-      <Stack.Screen  options={{headerShown: false}} name="Main" component={TabNav} />
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name='StackLogin'
+        component={Login}
+      />
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name='CadastroUsuario'
+        component={CadastroUsuario}
+      />
+      <Stack.Screen
+        options={{ headerShown: false }}
+        name='Main'
+        component={TabNav}
+      />
     </Stack.Navigator>
-  )
+  );
 }
 
 function TabNav() {
   return (
-      
     <Tab.Navigator
       initialRouteName='Home'
       screenOptions={({ route }) => ({
@@ -53,16 +72,14 @@ function TabNav() {
           }
           return <Ionicons name={iconName} size={size} color={color} />;
         },
-        tabBarActiveTintColor: "#0433FF",
+        tabBarActiveTintColor: "#131418",
         tabBarInactiveTintColor: "gray",
         headerShown: false,
       })}>
       <Tab.Screen name='Home' component={Home} />
       <Tab.Screen name='Galeria' component={StackGaleria} />
       <Tab.Screen name='Carrinho' component={Carrinho} />
-      <Tab.Screen name='Minha Conta' component={MinhaConta} /> 
-      
+      <Tab.Screen name='Minha Conta' component={MinhaConta} />
     </Tab.Navigator>
-    
   );
 }
