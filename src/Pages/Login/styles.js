@@ -18,9 +18,18 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  fxButton:{
+  fxImput: {
     flex: 3,
     width: "100%",
     alignItems: "center",
-  }
+  },
+  fxButton: {
+    flex: 3,
+    width: "100%",
+    alignItems: "center",
+  },
+  fxCadastro: {
+    paddingVertical: 10,
+    width: "100%",
+  },
 });

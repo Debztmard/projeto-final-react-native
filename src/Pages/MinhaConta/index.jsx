@@ -4,7 +4,7 @@ import { Button, TextInput, View, Image } from "react-native";
 import avatar from "../../../assets/avatar.png";
 import Texto from "../../components/Texto";
 import { deleteAllCadastro } from "../../repository/cadastroRepository";
-import iconLogin from "../../../assets/icon-login.png";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function MinhaConta({ navigation }) {
   const handleDelete = () => {
@@ -14,7 +14,11 @@ export default function MinhaConta({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.fxImg}>
-        <Image source={iconLogin} style={styles.avatar} resizeMode='center' />
+        <Ionicons
+          name='person-circle-outline'
+          style={styles.searchIcon}
+          size={150}
+        />
         <Texto style={styles.texto}>Sua Conta</Texto>
       </View>
       <View style={styles.fxButton}>

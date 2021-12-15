@@ -10,29 +10,29 @@ export const styles = StyleSheet.create({
     width: "80%",
     marginTop: 30,
   },
-  
+
   avatar: {
     width: 120,
     height: 120,
-    padding:20,
+    padding: 20,
     marginBottom: 10,
     alignItems: "center",
   },
-  texto:{
+  texto: {
     fontSize: 22,
     fontWeight: "bold",
     justifyContent: "center",
-    paddingTop: 20
+    paddingTop: 20,
   },
-  fxImg:{
+  fxImg: {
     flex: 1,
     width: "100%",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
   },
-  fxButton:{
+  fxButton: {
     flex: 1,
     width: "100%",
     alignItems: "center",
-  }
+  },
 });

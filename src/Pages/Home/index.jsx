@@ -6,7 +6,6 @@ import Header from "../../components/Header";
 import axios from "axios";
 import Oferta from "../../components/oferta";
 
-
 export default function Home({ navigation }) {
   const [produtos, setProdutos] = useState(null);
 
@@ -24,12 +23,12 @@ export default function Home({ navigation }) {
   }, []);
 
   return (
-    <View style={{backgroundColor: "#fff",}}>
-      <Header/>
+    <View style={{ backgroundColor: "#fff" }}>
+      <Header />
       <ScrollView>
         <Slider style={styles.slider} />
         <View style={styles.container}>
-         <Oferta />
+          <Oferta />
         </View>
       </ScrollView>
     </View>
