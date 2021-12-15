@@ -32,6 +32,7 @@ export default function Login({ navigation }) {
           resizeMode='contain'
         />
       </View>
+      <View style={styles.fxButton}>
       <TextInput
         style={{ width: "80%", borderWidth: 1, padding: 10, marginBottom: 10 }}
         placeholder='Digite seu Nome'
@@ -39,7 +40,7 @@ export default function Login({ navigation }) {
         onChangeText={setNome}
       />
       <TextInput
-        style={{ width: "80%", borderWidth: 1, padding: 10, marginBottom: 10 }}
+        style={{ width: "80%", borderWidth: 1, padding: 10, marginBottom: 20 }}
         placeholder='Digite sua senha'
         value={senha}
         onChangeText={setsenha}
@@ -55,6 +56,7 @@ export default function Login({ navigation }) {
               setListaCadastro: setListaCadastro,
             })
           }></Button>
+      </View>
       </View>
     </View>
   );
