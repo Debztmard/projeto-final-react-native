@@ -44,7 +44,7 @@ export default function Oferta() {
           <Image
             style={styles.img}
             source={
-              apiData ? { uri: apiData } : require("../../../assets/logo.png")
+              apiData ? { uri: apiData } : require("../../../assets/poli.png")
             }
             resizeMode="contain"
             onLoadEnd={() => setLoading(false)}

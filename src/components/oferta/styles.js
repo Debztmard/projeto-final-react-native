@@ -13,12 +13,15 @@ export const styles = StyleSheet.create({
       height: 200,
       alignItems: "center",
       justifyContent: "center",
+      backgroundColor: "#fff",
+      marginTop:20,
 
     },
     btnContainer: {
       flex: 1,
       justifyContent: "center",
-      marginTop:5,
+      marginTop:24,
+      
     },
     img: {
       width: 300,
