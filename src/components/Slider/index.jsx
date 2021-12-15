@@ -7,9 +7,9 @@ import { View, Image, Text, StyleSheet, Dimensions, ScrollView } from 'react-nat
 const {width} = Dimensions.get("window");
 const height = width * 0.6;
 
-const itens = ['https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-'https://images.pexels.com/photos/1133957/pexels-photo-1133957.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-'https://images.pexels.com/photos/870711/pexels-photo-870711.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
+const itens = ['https://images.pexels.com/photos/7957755/pexels-photo-7957755.jpeg?cs=srgb&dl=pexels-tamanna-rumee-7957755.jpg&fm=jpg',
+'https://images.pexels.com/photos/7957750/pexels-photo-7957750.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+'https://images.pexels.com/photos/7957753/pexels-photo-7957753.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 ]
 export default class Slider extends React.Component {
 
