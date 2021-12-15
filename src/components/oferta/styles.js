@@ -14,13 +14,13 @@ export const styles = StyleSheet.create({
       alignItems: "center",
       justifyContent: "center",
       backgroundColor: "#fff",
-      marginTop:20,
+      marginTop:10,
 
     },
     btnContainer: {
       flex: 1,
       justifyContent: "center",
-      marginTop:24,
+      marginTop:10,
       
     },
     img: {
