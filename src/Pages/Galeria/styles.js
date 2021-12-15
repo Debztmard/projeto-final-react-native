@@ -7,5 +7,9 @@ import { StyleSheet } from "react-native";
       alignItems: "center",
       justifyContent: "center",
     },
-    
+    btnContainer: {
+      flex: 1,
+      justifyContent: "center",
+      marginTop:10,
+    },    
     }); 

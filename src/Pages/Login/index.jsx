@@ -1,8 +1,9 @@
 import { styles } from "./styles";
 import React, { useEffect, useState } from "react";
-import { Button, TextInput, View } from "react-native";
+import { Button, TextInput, View, Image } from "react-native";
 import Texto from "../../components/Texto";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import poli from "../../../assets/poli.png";
 
 export default function Login({ navigation }) {
   const [nome, setNome] = useState(null);
@@ -26,14 +27,24 @@ export default function Login({ navigation }) {
 
   return (
     <View style={styles.container}>
+      <Image
+          source={poli}
+          style={{
+            width:100,
+            height:100,
+          }}
+          resizeMode='contain'
+        />
       <View style={styles.imgPrinc}>
         <Ionicons
           name='person-circle-outline'
           style={styles.searchIcon}
           size={150}
         />
+        <Texto>FAÇA SEU LOGIN</Texto>
       </View>
       <View style={styles.fxButton}>
+        
         <TextInput
           style={{
             width: "80%",
