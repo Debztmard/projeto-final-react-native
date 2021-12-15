@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
     marginTop:5,
   },
   textInput: {
-    width: "80%",
+    width: 325,
     height: 45,
     borderWidth: 1,
     padding: 10,

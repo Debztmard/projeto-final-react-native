@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { View, Image, Animated, TextInput } from "react-native";
 import { styles } from "./styles";
 import poli from "../../../assets/poli.png";
-import iconLogin from "../../../assets/icon-login.png";
-import iconLupa from "../../../assets/icon-lupa.png";
 import Ionicons from "react-native-vector-icons/Ionicons";
 
 export default function Header() {
@@ -25,11 +23,6 @@ export default function Header() {
           resizeMode="contain"
         />
         <Ionicons name="person-circle-outline" size={45} />
-        {/* <Image
-          source={iconLogin}
-          style={styles.imgLogin}
-          resizeMode="contain"
-        /> */}
       </Animated.View>
       <View style={styles.pesquisa}>        
         <Ionicons name="search" style={styles.imgLupa} size={30} />
