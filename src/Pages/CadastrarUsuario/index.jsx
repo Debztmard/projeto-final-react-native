@@ -33,23 +33,13 @@ export default function CadastroUsuario({ navigation, route }) {
       </View>
       <View style={styles.fxButton}>
         <TextInput
-          style={{
-            width: "80%",
-            borderWidth: 1,
-            padding: 10,
-            marginBottom: 10,
-          }}
+          style={styles.input}
           placeholder='Digite seu Nome'
           value={usuario}
           onChangeText={setUsuario}
         />
         <TextInput
-          style={{
-            width: "80%",
-            borderWidth: 1,
-            padding: 10,
-            marginBottom: 10,
-          }}
+          style={styles.input}
           placeholder='Digite sua senha'
           value={senha}
           onChangeText={setSenha}

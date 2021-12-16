@@ -28,59 +28,46 @@ export default function Login({ navigation }) {
   return (
     <View style={styles.container}>
       <Image
-          source={poli}
-          style={{
-            width:100,
-            height:100,
-          }}
-          resizeMode='contain'
-        />
+        source={poli}
+        style={styles.logo}
+        resizeMode="contain"
+      />
       <View style={styles.imgPrinc}>
         <Ionicons
-          name='person-circle-outline'
+          name="person-circle-outline"
           style={styles.searchIcon}
           size={150}
         />
         <Texto>FAÇA SEU LOGIN</Texto>
       </View>
       <View style={styles.fxButton}>
-        
         <TextInput
-          style={{
-            width: "80%",
-            borderWidth: 1,
-            padding: 10,
-            marginBottom: 10,
-          }}
-          placeholder='Digite seu Nome'
+          style={styles.input}
+          placeholder="Digite seu Nome"
           value={nome}
           onChangeText={setNome}
         />
         <TextInput
-          style={{
-            width: "80%",
-            borderWidth: 1,
-            padding: 10,
-            marginBottom: 20,
-          }}
-          placeholder='Digite sua senha'
+          style={styles.input}
+          placeholder="Digite sua senha"
           value={senha}
           onChangeText={setsenha}
         />
         <View style={styles.btnEntrar}>
           <View style={styles.fxCadastro}>
-            <Button title='Entrar' color='#131418' onPress={handleClick} />
+            <Button title="Entrar" color="#131418" onPress={handleClick} />
           </View>
           <View style={styles.fxCadastro}>
             <Texto style={{ textAlign: "center" }}>Não tem cadastro?</Texto>
             <Button
-              title='Cadastrar'
-              color='#131418'
+              title="Cadastrar"
+              color="#131418"
               onPress={() =>
                 navigation.navigate("CadastroUsuario", {
                   setListaCadastro: setListaCadastro,
                 })
-              }></Button>
+              }
+            ></Button>
           </View>
         </View>
       </View>

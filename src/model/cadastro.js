@@ -10,8 +10,8 @@ export default class Cadastro extends BaseModel {
     return async () => SQLite.openDatabase("database.db");
   }
 
-  static get tableName(){
-      return "cadastro";
+  static get tableName() {
+    return "cadastro";
   }
 
   static get columnMapping() {

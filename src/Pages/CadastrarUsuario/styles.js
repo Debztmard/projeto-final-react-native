@@ -23,4 +23,10 @@ export const styles = StyleSheet.create({
     width: "100%",
     alignItems: "center",
   },
+  input: {
+    width: "80%",
+    borderWidth: 1,
+    padding: 10,
+    marginBottom: 10,
+  },
 });

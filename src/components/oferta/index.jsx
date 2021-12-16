@@ -46,16 +46,16 @@ export default function Oferta() {
             source={
               apiData ? { uri: apiData } : require("../../../assets/poli.png")
             }
-            resizeMode='contain'
+            resizeMode="contain"
             onLoadEnd={() => setLoading(false)}
           />
         </View>
       </TouchableOpacity>
-      {loading && <ActivityIndicator size='large' color='#131418' />}
+      {loading && <ActivityIndicator size="large" color="#131418" />}
       <View style={styles.btnContainer}>
         <Button
-          title='Veja outra oferta'
-          color='#131418'
+          title="Veja outra oferta"
+          color="#131418"
           onPress={handleClick}
           disabled={loading}
         />

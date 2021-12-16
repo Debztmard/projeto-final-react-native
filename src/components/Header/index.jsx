@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Image, Animated, TextInput } from "react-native";
+import { View, Animated, TextInput } from "react-native";
 import { styles } from "./styles";
 import poli from "../../../assets/poli.png";
 import Ionicons from "react-native-vector-icons/Ionicons";
@@ -20,11 +20,11 @@ export default function Header() {
             }),
             height: 40,
           }}
-          resizeMode='contain'
+          resizeMode="contain"
         />
         <Ionicons name="person-circle-outline" size={45} />
       </Animated.View>
-      <View style={styles.pesquisa}>        
+      <View style={styles.pesquisa}>
         <Ionicons name="search" style={styles.imgLupa} size={30} />
         <TextInput
           style={styles.textInput}

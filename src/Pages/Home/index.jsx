@@ -6,7 +6,7 @@ import Header from "../../components/Header";
 import axios from "axios";
 import Oferta from "../../components/oferta";
 
-export default function Home({ navigation }) {
+export default function Home() {
   const [produtos, setProdutos] = useState(null);
 
   const handleClick = async () => {

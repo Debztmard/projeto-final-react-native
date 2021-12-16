@@ -18,17 +18,15 @@ export default function App() {
   useEffect(async () => {
     createTable();
   }, []);
-  
 
   if (!fonteCarregada) {
     return <AppLoading />;
-  };
+  }
 
   return (
     <NavigationContainer>
-      <StatusBar backgroundColor="#000000" barStyle="light-content"/>
-      <StackLogin/>
+      <StatusBar backgroundColor="#000000" barStyle="light-content" />
+      <StackLogin />
     </NavigationContainer>
   );
 }
-

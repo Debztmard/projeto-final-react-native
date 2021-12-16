@@ -32,4 +32,14 @@ export const styles = StyleSheet.create({
     paddingVertical: 10,
     width: "100%",
   },
+  logo: {
+    width: 100,
+    height: 100,
+  },
+  input: {
+    width: "80%",
+    borderWidth: 1,
+    padding: 10,
+    marginBottom: 10,
+  },
 });

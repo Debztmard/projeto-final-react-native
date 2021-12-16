@@ -45,20 +45,7 @@ export default function Usuario() {
         value={senha}
         onChangeText={setSenha}
       />
-      {/* <Button title="Excluir conta" onPress={handleDelete} />
-      <Texto>Excluir conta</Texto> */}
       <Button title="Criar conta" onPress={handleClick} />
-      {/* <Texto>Carrinho</Texto>
-      {listaCarrinho.map((carrinho) => {
-        return (
-          <View key={carrinho.id}>
-            <Texto>Produto: {carrinho.nome}</Texto>
-            <Texto>Quantidade: {carrinho.quantidade}</Texto>
-            <Texto>Valor: {carrinho.totalItem}</Texto>
-            <Texto>Total: {carrinho.totalPedido}</Texto>
-          </View>
-        );
-      })} */}
     </View>
   );
 }

@@ -10,7 +10,6 @@ export const styles = StyleSheet.create({
     width: "80%",
     marginTop: 30,
   },
-
   avatar: {
     width: 120,
     height: 120,

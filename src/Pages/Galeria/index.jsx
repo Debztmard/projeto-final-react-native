@@ -22,8 +22,8 @@ export default function Galeria() {
   }, []);
 
   return (
-    <View >
-      <Header/>
+    <View>
+      <Header />
       <ScrollView>
         <View style={styles.container}>
           {produtos?.map((produtos) => {
@@ -42,4 +42,3 @@ export default function Galeria() {
     </View>
   );
 }
-

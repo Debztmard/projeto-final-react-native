@@ -19,12 +19,12 @@ function StackGaleria() {
     <Stack.Navigator>
       <Stack.Screen
         options={{ headerShown: false }}
-        name='StackGaleria'
+        name="StackGaleria"
         component={Galeria}
       />
       <Stack.Screen
         options={{ headerShown: false }}
-        name='Detalhes'
+        name="Detalhes"
         component={Detalhes}
       />
     </Stack.Navigator>
@@ -36,17 +36,17 @@ export default function StackLogin() {
     <Stack.Navigator>
       <Stack.Screen
         options={{ headerShown: false }}
-        name='StackLogin'
+        name="StackLogin"
         component={Login}
       />
       <Stack.Screen
         options={{ headerShown: false }}
-        name='CadastroUsuario'
+        name="CadastroUsuario"
         component={CadastroUsuario}
       />
       <Stack.Screen
         options={{ headerShown: false }}
-        name='Main'
+        name="Main"
         component={TabNav}
       />
     </Stack.Navigator>
@@ -56,7 +56,7 @@ export default function StackLogin() {
 function TabNav() {
   return (
     <Tab.Navigator
-      initialRouteName='Home'
+      initialRouteName="Home"
       screenOptions={({ route }) => ({
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
@@ -75,11 +75,12 @@ function TabNav() {
         tabBarActiveTintColor: "#131418",
         tabBarInactiveTintColor: "gray",
         headerShown: false,
-      })}>
-      <Tab.Screen name='Home' component={Home} />
-      <Tab.Screen name='Galeria' component={StackGaleria} />
-      <Tab.Screen name='Carrinho' component={Carrinho} />
-      <Tab.Screen name='Minha Conta' component={MinhaConta} />
+      })}
+    >
+      <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Galeria" component={StackGaleria} />
+      <Tab.Screen name="Carrinho" component={Carrinho} />
+      <Tab.Screen name="Minha Conta" component={MinhaConta} />
     </Tab.Navigator>
   );
 }
